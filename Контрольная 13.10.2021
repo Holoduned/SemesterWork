@@ -1,0 +1,80 @@
+using System;
+
+namespace study
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите число - ранг квадратичной матрицы: ");
+            int rank = Convert.ToInt32(Console.ReadLine());
+            if (CheckRank(rank))
+            {
+                string[,] numbers = new string[rank, rank];
+                numbers = ArrayInput(numbers, rank);
+
+                Console.WriteLine("Массив симметричен относительно главной диагонали? - " + Symmetry(numbers, rank));
+
+            }
+        }
+            #region Ищем симметрию
+            static string Symmetry(string[,] num, int rank)
+            {
+                int counter = 0;
+
+                for (int row = 0; row < rank; row++)
+                {
+                    for (int column = 0; column < rank; column++)
+                    {
+                        if (row == column)
+                        {
+                            continue;
+                        }
+                        if (num[row, column] == num[column, row])
+                        {
+                            counter += 1;
+                        }
+                    }
+                }
+
+                if (counter / (rank - 1) == rank)
+                {
+                    return "Да";
+                }
+                else
+                {
+                    return "Нет";
+                }    
+            }
+        #endregion
+        #region Ввод данных в массив
+        static string[,] ArrayInput(string[,] numbers, int rank)
+        {
+            for (int row = 0; row < rank; row++)
+            {
+                for (int column = 0; column < rank; column++)
+                {
+                    numbers[row, column] = Console.ReadLine();
+                }
+            }
+
+            return numbers;
+        }
+        #endregion
+        #region Проверка входного ранга
+        static bool CheckRank(int rank)
+        {
+            return (rank == 0 | rank == 1)
+            {
+                Console.WriteLine("Недопустимое значение ранга матрицы");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        #endregion
+
+    }
+}
