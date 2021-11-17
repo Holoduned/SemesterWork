@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Homework\Homework_03_11_2021\Classes.cs" />
     <Compile Include="Homework\Homework_03_11_2021\tasks.cs" />
     <Compile Include="Homework\Homework_10_11_2021\task complexMatrix.cs" />
