@@ -72,5 +72,8 @@
     <None Include="Homework\Homework_29_09_2021\Фибоначчи" />
     <None Include="Контрольная 13.10.2021" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
