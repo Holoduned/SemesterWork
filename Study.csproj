@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Homework\Homework_03_11_2021\Classes.cs" />
     <Compile Include="Homework\Homework_03_11_2021\tasks.cs" />
     <Compile Include="Homework\Homework_10_11_2021\task complexMatrix.cs" />
@@ -73,8 +72,6 @@
     <None Include="Homework\Homework_29_09_2021\Фибоначчи" />
     <None Include="Контрольная 13.10.2021" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
