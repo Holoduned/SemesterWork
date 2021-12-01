@@ -49,6 +49,8 @@
     <Compile Include="Homework\Homework_10_11_2021\Class complexMatrix.cs" />
     <Compile Include="Homework\Homework_27_10_2021\Classes.cs" />
     <Compile Include="Homework\Homework_27_10_2021\tasks.cs" />
+    <Compile Include="Homework\Homework_01-_12_2021\Christmas Decoration.cs" />
+    <Compile Include="Homework\Homework_01-_12_2021\Christmas Deroration class.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
