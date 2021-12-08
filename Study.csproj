@@ -56,6 +56,8 @@
     <Compile Include="Homework\Homework_01-_12_2021\Christmas Deroration class.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="задание на паре, 08.12.2021\Class1.cs" />
+    <Compile Include="задание на паре, 08.12.2021\Class2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
