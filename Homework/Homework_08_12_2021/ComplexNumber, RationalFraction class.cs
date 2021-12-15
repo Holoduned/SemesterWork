@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace Study.Homework.Homework_08_12_2021
 {
-    public interface ICloneable
-    {
-        object Clone();
-    }
-
     public interface IComparable
     {
         int CompareTo(object o);

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DeeULib">
+      <HintPath>.\DeeULib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +53,8 @@
     <Compile Include="Homework\Homework_08_12_2021\str extension class.cs" />
     <Compile Include="Homework\Homework_10_11_2021\task complexMatrix.cs" />
     <Compile Include="Homework\Homework_10_11_2021\Class complexMatrix.cs" />
+    <Compile Include="Homework\Homework_22_12_2021\Class1.cs" />
+    <Compile Include="Homework\Homework_22_12_2021\Class2.cs" />
     <Compile Include="Homework\Homework_27_10_2021\Classes.cs" />
     <Compile Include="Homework\Homework_27_10_2021\tasks.cs" />
     <Compile Include="Homework\Homework_01-_12_2021\Christmas Decoration.cs" />
@@ -58,6 +63,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="задание на паре, 08.12.2021\Class1.cs" />
     <Compile Include="задание на паре, 08.12.2021\Class2.cs" />
+    <Compile Include="Контрольная_15_12_2021\Class Technic.cs" />
+    <Compile Include="Контрольная_15_12_2021\main technic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
