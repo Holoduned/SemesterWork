@@ -53,8 +53,13 @@
     <Compile Include="Homework\Homework_08_12_2021\str extension class.cs" />
     <Compile Include="Homework\Homework_10_11_2021\task complexMatrix.cs" />
     <Compile Include="Homework\Homework_10_11_2021\Class complexMatrix.cs" />
-    <Compile Include="Homework\Homework_22_12_2021\Class1.cs" />
-    <Compile Include="Homework\Homework_22_12_2021\Class2.cs" />
+    <Compile Include="Homework\Homework_22_12_2021\Classes1.cs" />
+    <Compile Include="Homework\Homework_22_12_2021\main.cs" />
+    <Compile Include="Homework\Homework_22_12_2021\Экзамены1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Экзамены.txt</DependentUpon>
+    </Compile>
     <Compile Include="Homework\Homework_27_10_2021\Classes.cs" />
     <Compile Include="Homework\Homework_27_10_2021\tasks.cs" />
     <Compile Include="Homework\Homework_01-_12_2021\Christmas Decoration.cs" />
@@ -86,6 +91,15 @@
     <None Include="Homework\Homework_29_09_2021\Фибоначчи" />
     <None Include="Контрольная 13.10.2021" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Homework\Homework_22_12_2021\Экзамены.txt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Экзамены1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Homework\Homework_22_12_2021\футбол.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

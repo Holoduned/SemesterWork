@@ -173,4 +173,155 @@ namespace Study.Homework.Homework_22_12_2021
         }
     }
     #endregion
+
+    #region Футболл
+    public struct Match
+    {
+        public string Name; public int points; public DateTime gamedate;
+
+        public Match(string name, int point, DateTime date)
+        {
+            this.Name = name; this.points = point; this.gamedate = date;
+        }
+
+        public static void Print(Match[] matches)
+        {
+            for (int i = 0; i < matches.Length; i++)
+            {
+                Console.WriteLine($"{matches[i].Name}, {matches[i].gamedate}, {matches[i].points}");
+            }
+        }
+    }
+
+    class MatchManager
+    {
+        public static Match[] FileRead()
+        {
+            string[] lines = File.ReadAllLines(@"C:\git\Homework\Homework_22_12_2021\футбол.txt");
+            Match[] matches = new Match[lines.Length];
+
+            for (int i = 0; i < matches.Length; i++)
+            {
+                string[] line = lines[i].Split(' ');
+                string[] date = line[1].Split('.');
+                matches[i] = new Match(line[0], Convert.ToInt32(line[2]), new DateTime(Convert.ToInt32(date[0]), Convert.ToInt32(date[1]), Convert.ToInt32(date[2]), Convert.ToInt32(date[3]), Convert.ToInt32(date[4]), Convert.ToInt32(date[5])));
+            }
+            return matches;
+        }
+
+        public static void FoundLeafer(DateTime a, DateTime b, Match[] matches)
+        {
+            Match[] periodmatch = new Match[matches.Length];
+            Console.WriteLine("В данный период играли команды: ");
+            for (int i = 0; i < matches.Length; i++)
+            {
+                if ( a < matches[i].gamedate && matches[i].gamedate < b)
+                {
+                    periodmatch[i] = matches[i];
+                    Console.WriteLine($"{matches[i].Name}");
+                }
+            }
+            Console.WriteLine($"Победила команда {periodmatch[periodmatch.Length - 1].Name}");
+        }
+
+        public static Match[] Sort(Match[] matches)
+        {
+            Match temp;
+            for (int i = 0; i < matches.Length - 1; i++)
+            {
+                for (int j = i + 1; j < matches.Length; j++)
+                {
+                    if (matches[i].points > matches[j].points)
+                    {
+                        temp = matches[i];
+                        matches[i] = matches[j];
+                        matches[j] = temp;
+                    }
+                }
+            }
+            return matches;
+        }
+    }
+    #endregion
+
+    #region Экзамены
+    public struct Exam
+    {
+        public string Name; public DateTime Examdate;
+
+        public Exam(string name, DateTime date)
+        {
+            this.Name = name; this.Examdate = date;
+        }
+
+        public static void Print(List<Exam> exams)
+        {
+            for (int i = 0; i < exams.Count; i++)
+            {
+                Console.WriteLine($"{exams[i].Name}, {exams[i].Examdate}");
+            }
+        }
+    }
+
+    class ExamManager
+    {
+        public static Exam[] FileRead()
+        {
+            string[] lines = File.ReadAllLines(@"C:\git\Homework\Homework_22_12_2021\Экзамены.txt");
+            Exam[] exams = new Exam[lines.Length];
+
+            for (int i = 0; i < exams.Length; i++)
+            {
+                string[] line = lines[i].Split(' ');
+                string[] date = line[1].Split('.');
+                exams[i] = new Exam(line[0], new DateTime(Convert.ToInt32(date[0]), Convert.ToInt32(date[1]), Convert.ToInt32(date[2]), Convert.ToInt32(date[3]), Convert.ToInt32(date[4]), Convert.ToInt32(date[5])));
+            }
+            return exams;
+        }
+
+        public static List<Exam> Table(Exam[] exams)
+        {
+            List<Exam> examsTable = new List<Exam>();
+            List<DateTime> dates = new List<DateTime>();
+            for (int i = 0; i < exams.Length; i++)
+            {
+                if (dates.Contains(exams[i].Examdate))
+                {
+                    while (dates.Contains(exams[i].Examdate))
+                    {
+                        var nedate = exams[i].Examdate.AddDays(1);
+                        exams[i].Examdate = nedate;
+                    }
+                    examsTable.Add(exams[i]);
+                    dates.Add(exams[i].Examdate);
+                }
+                else
+                {
+                    dates.Add(exams[i].Examdate);
+                    examsTable.Add(exams[i]);
+                }
+            }
+            return examsTable;
+        }
+
+        public static List<Exam> Sort(List<Exam> exams)
+        {
+            Exam temp;
+            for (int i = 0; i < exams.Count - 1; i++)
+            {
+                for (int j = i + 1; j < exams.Count; j++)
+                {
+                    if (exams[i].Examdate > exams[j].Examdate)
+                    {
+                        temp = exams[i];
+                        exams[i] = exams[j];
+                        exams[j] = temp;
+                    }
+                }
+            }
+            return exams;
+        }
+
+    }
+    #endregion
 }
