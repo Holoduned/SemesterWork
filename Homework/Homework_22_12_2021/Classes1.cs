@@ -215,7 +215,7 @@ namespace Study.Homework.Homework_22_12_2021
             Console.WriteLine("В данный период играли команды: ");
             for (int i = 0; i < matches.Length; i++)
             {
-                if ( a < matches[i].gamedate && matches[i].gamedate < b)
+                if (a < matches[i].gamedate && matches[i].gamedate < b)
                 {
                     periodmatch[i] = matches[i];
                     Console.WriteLine($"{matches[i].Name}");
